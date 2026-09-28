@@ -6,7 +6,7 @@ name: "CampusConnect"          # string
 version: 3                     # integer
 uptime_target: 99.9            # float
 is_released: false             # boolean
-release_date: 2026-10-01       # datetime
+release_date: 2026-09-28       # datetime
 
 # --- Map (nested) ---
 project:
