@@ -1,0 +1,27 @@
+# CP5401 Prac 03 - YAML Practice
+# Demonstrating all YAML data types
+
+# --- Scalar types ---
+name: "CampusConnect"          # string
+version: 3                     # integer
+uptime_target: 99.9            # float
+is_released: false             # boolean
+release_date: 2026-10-01       # datetime
+
+# --- Map (nested) ---
+project:
+  subject: CP5401
+  module: 3
+  topic: SQA and Project Plan
+
+# --- Sequence (list) ---
+quality_goals:
+  - Zero critical defects at release
+  - 99.9% availability during teaching weeks
+  - Booking confirmation within 3 seconds
+
+# --- Multi-line string using pipe ---
+summary: |
+  YAML is a human-readable data format.
+  It uses indentation instead of braces.
+  GitHub Actions workflows are written in YAML.
