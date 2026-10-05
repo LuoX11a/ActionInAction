@@ -1,0 +1,24 @@
+name: Jobs and Steps Demo
+on:
+  push:
+    branches:
+      - main
+jobs:
+  job-one:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Step 1 - Start
+        run: echo "Job One started"
+      - name: Step 2 - Do work
+        run: echo "Job One doing work..."
+  job-two:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Step 1 - Parallel job
+        run: echo "Job Two runs in PARALLEL with Job One"
+  job-three:
+    runs-on: ubuntu-latest
+    needs: [job-one, job-two]   # Runs AFTER job-one and job-two complete
+    steps:
+      - name: Final step
+        run: echo "Job Three runs only after Job One AND Job Two finish!"
