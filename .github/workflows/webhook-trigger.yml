@@ -1,0 +1,14 @@
+name: Webhook Trigger Demo 
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+jobs:
+  greet:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print trigger info
+        run: echo "Workflow triggered by a webhook event on branch main!"
