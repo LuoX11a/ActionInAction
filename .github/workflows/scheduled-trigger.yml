@@ -1,0 +1,10 @@
+name: Scheduled Trigger Demo
+on:
+  schedule:
+    - cron: '0 9 * * 1'  # Every Monday at 9:00 AM UTC
+jobs:
+  weekly-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run weekly task
+        run: echo "This workflow runs every Monday at 9AM UTC automatically!"
